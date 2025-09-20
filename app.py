@@ -11,7 +11,6 @@ st.set_page_config(
     page_title="News Brief Generator",
     page_icon="📰",
     layout="wide",
-    port=8501
 )
 
 def main():
