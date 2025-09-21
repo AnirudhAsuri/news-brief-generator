@@ -1,12 +1,11 @@
-# News-Brief Generator
+# News Brief Generator
 
-A powerful and efficient tool for doing amazing things.
+Get the essence of any news article in seconds, powered by the high-speed Groq API.
 
 ***
 
 ### Table of Contents
 * [About The Project](#about-the-project)
-* [Screenshot](#screenshot)
 * [Key Features](#key-features)
 * [Tech Stack](#tech-stack)
 * [Getting Started](#getting-started)
@@ -19,31 +18,24 @@ A powerful and efficient tool for doing amazing things.
 
 ## About The Project
 
-This project was created to solve the problem of [insert problem here]. It provides an easy-to-use interface to accomplish [insert main function here], making the process faster and more efficient for developers and end-users alike.
-
-***
-
-## Screenshot
-
-
-*A screenshot of the main application window.*
-
-***
+In an age of information overload, staying updated with the news can be a time-consuming task. The **News Brief Generator** is a tool designed to solve this problem. By providing a URL to a news article, this application leverages the incredible speed of the Groq™ LPU Inference Engine to deliver a concise, accurate, and easy-to-read summary, allowing you to stay informed without reading through lengthy articles.
 
 ## Key Features
 
-* **Feature One:** A brief description of the first major feature.
-* **Feature Two:** A brief description of the second key capability.
-* **Feature Three:** A brief description of another important aspect.
+* **Blazing Fast Summaries:** Utilizes the Groq API for near-instant summary generation.
+* **URL-Based Input:** Simply provide a link to a news article to get started.
+* **Accurate & Concise Content:** The AI extracts the most critical points from the article.
+* **Clean & Simple UI:** A straightforward interface that focuses on functionality.
 
 ***
 
 ## Tech Stack
 
-* **Backend:** Python, Node.js, etc.
-* **Frontend:** React, Vue, Streamlit, etc.
-* **Database:** MongoDB, PostgreSQL, etc.
-* **API:** REST, GraphQL, etc.
+* **Backend:** Python
+* **Frontend:** Streamlit
+* **LLM Provider:** Groq API
+* **Web Scraping:** BeautifulSoup
+* **Environment Management:** python-dotenv
 
 ***
 
@@ -54,28 +46,38 @@ Follow these instructions to get a local copy of the project set up and running.
 ### Prerequisites
 
 * Python 3.9+
-* Node.js v16+
 * Git
 
 ### Installation
 
 1.  **Clone the repository** to your local machine.
     ```sh
-    git clone [https://github.com/YourUsername/YourProjectRepo.git](https://github.com/YourUsername/YourProjectRepo.git)
-    cd YourProjectRepo
+    git clone [https://github.com/AnirudhAsuri/news-brief-generator.git](https://github.com/AnirudhAsuri/news-brief-generator.git)
+    cd news-brief-generator
     ```
 
-2.  **Install the required packages.** (Example for a Python project)
+2.  **Create and activate a virtual environment.**
+    * For macOS/Linux:
+        ```sh
+        python3 -m venv venv
+        source venv/bin/activate
+        ```
+    * For Windows:
+        ```sh
+        python -m venv venv
+        .\venv\Scripts\activate
+        ```
+
+3.  **Install the required packages.**
     ```sh
     pip install -r requirements.txt
     ```
 
-3.  **Set up your environment variables.**
+4.  **Set up your environment variables.**
     * Create a file named `.env` in the root directory.
-    * Add the necessary keys, for example:
+    * Add your Groq API key to this file:
         ```env
-        API_KEY="YourSecretApiKey"
-        DATABASE_URL="YourDatabaseConnectionString"
+        GROQ_API_KEY="gsk_YourSecretApiKeyHere"
         ```
 
 ***
@@ -84,6 +86,4 @@ Follow these instructions to get a local copy of the project set up and running.
 
 To start the application, run the following command in your terminal:
 ```sh
-python app.py
-
-Then, navigate to http://localhost:5000 in your web browser.
+streamlit run app.py
